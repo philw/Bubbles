@@ -10,10 +10,10 @@
 
     End Sub
 
-    Private Sub PictureBox_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox.Paint
+    Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
 
-        Bubble1.Paint(e.Graphics)
-        Bubble2.Paint(e.Graphics)
+        Bubble1.Draw(e.Graphics)
+        Bubble2.Draw(e.Graphics)
 
     End Sub
 
@@ -21,7 +21,7 @@
 
         Bubble1.Move()
         Bubble2.Move()
-        PictureBox.Refresh()
+        PictureBox1.Refresh()
 
     End Sub
 

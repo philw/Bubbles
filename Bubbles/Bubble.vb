@@ -2,21 +2,21 @@
 
     Private PositionX As Integer
     Private PositionY As Integer
-    Private Radius As Integer
+    Private Size As Integer
 
-    Public Sub New(X As Integer, Y As Integer, R As Integer)
+    Public Sub New(X As Integer, Y As Integer, S As Integer)
         PositionX = X
         PositionY = Y
-        Radius = R
+        Size = S
     End Sub
 
     Public Sub Move()
-        PositionY -= Radius / 5
+        PositionY -= Size / 5
     End Sub
 
-    Public Sub Paint(g As Graphics)
-        Dim Pen As New Pen(Color.Red, 3)
-        g.DrawEllipse(Pen, PositionX, PositionY, Radius, Radius)
+    Public Sub Draw(g As Graphics)
+        Dim Pen As New Pen(Color.Red)
+        g.DrawEllipse(Pen, PositionX, PositionY, Size, Size)
     End Sub
 
 End Class
